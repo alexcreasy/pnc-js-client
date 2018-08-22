@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "outFile": "pnc-client.js",
+    "outDir": "build",
+    "rootDir": "src",
+    "esModuleInterop": true 
+  }
+}

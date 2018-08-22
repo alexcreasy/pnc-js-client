@@ -1,0 +1,28 @@
+{
+  "name": "pnc-client",
+  "version": "0.1.0",
+  "description": "JavaScript client for PNC",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexcreasy/pnc-js-client.git"
+  },
+  "author": "Alex Creasy",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/alexcreasy/pnc-js-client/issues"
+  },
+  "homepage": "https://github.com/alexcreasy/pnc-js-client#readme",
+  "dependencies": {
+    "isomorphic-ws": "^4.0.1"
+  },
+  "peerDependencies": {
+    "ws": "^6.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^3.0.1"
+  }
+}
