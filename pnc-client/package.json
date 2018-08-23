@@ -4,7 +4,13 @@
   "description": "JavaScript client for PNC",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "echo \"Not yet implemented\"",
+    "clean": "rm -rf build/",
+    "clean:force": "rm -rf node_modules && npm run clean",
+    "compile": "npm run compile:es5 & npm run compile:es2015",
+    "precompile": "npm run clean && mkdir build",
+    "compile:es5": "tsc",
+    "compile:es2015": "tsc --outDir build/es2015 --target es2015"
   },
   "repository": {
     "type": "git",
@@ -17,12 +23,14 @@
   },
   "homepage": "https://github.com/alexcreasy/pnc-js-client#readme",
   "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
     "isomorphic-ws": "^4.0.1"
   },
   "peerDependencies": {
     "ws": "^6.0.0"
   },
   "devDependencies": {
+    "@types/isomorphic-fetch": "0.0.34",
     "typescript": "^3.0.1"
   }
 }
