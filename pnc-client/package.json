@@ -6,13 +6,15 @@
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "scripts": {
-    "test": "echo \"Not yet implemented\"",
+    "test": "npm run test:node && npm run test:browser",
+    "test:node": "jasmine --config=jasmine.json",
+    "test:browser": "echo \"Not yet implemented\"",
     "clean": "rm -rf build/",
     "clean:force": "rm -rf node_modules && npm run clean",
     "compile": "tsc",
     "build": "npm run compile",
     "prebuild": "npm run clean && mkdir build",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build && npm run test"
   },
   "repository": {
     "type": "git",
@@ -33,6 +35,8 @@
   },
   "devDependencies": {
     "@types/isomorphic-fetch": "0.0.34",
+    "@types/jasmine": "^2.8.8",
+    "jasmine": "^3.2.0",
     "typescript": "^3.0.1"
   }
 }

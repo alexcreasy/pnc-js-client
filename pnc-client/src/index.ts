@@ -4,7 +4,7 @@ import { Person } from "./Person";
 const API_URL = "https://api.github.com";
 
 
-export function fetchRepos(): Promise<Object> {
+export function fetchRepos(): Promise<any> {
     return fetch(API_URL)
-            .then(resp => resp.json);
+            .then(resp => resp.json());
 }
