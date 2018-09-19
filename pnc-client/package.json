@@ -1,16 +1,18 @@
 {
   "name": "pnc-client",
   "version": "0.1.0",
+  "private": true,
   "description": "JavaScript client for PNC",
-  "main": "index.js",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
   "scripts": {
     "test": "echo \"Not yet implemented\"",
     "clean": "rm -rf build/",
     "clean:force": "rm -rf node_modules && npm run clean",
-    "compile": "npm run compile:es5 & npm run compile:es2015",
-    "precompile": "npm run clean && mkdir build",
-    "compile:es5": "tsc",
-    "compile:es2015": "tsc --outDir build/es2015 --target es2015"
+    "compile": "tsc",
+    "build": "npm run compile",
+    "prebuild": "npm run clean && mkdir build",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
