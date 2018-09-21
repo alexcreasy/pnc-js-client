@@ -1,0 +1,12 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "lib": ["es2015", "dom"],
+        "noImplicitAny": false,
+        "declaration": false
+    },
+    "include": [
+        "**/*.ts"
+    ],
+    "exclude": []
+}

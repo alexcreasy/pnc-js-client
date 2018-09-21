@@ -4,6 +4,12 @@
 ## Project Build Dir ##
 build/
 
+## Generated Build Reports Dir ##
+reports/
+
+## Test Temp Dir ##
+.test/
+
 ### Linux ###
 *~
 

@@ -8,13 +8,14 @@
   "scripts": {
     "test": "npm run test:node && npm run test:browser",
     "test:node": "jasmine --config=jasmine.json",
-    "test:browser": "echo \"Not yet implemented\"",
-    "clean": "rm -rf build/",
+    "pretest:node": "tsc -p tsconfig.jasmine.json",
+    "test:browser": "karma start karma.js",
+    "clean": "rm -rf build/ .test/ coverage/",
     "clean:force": "rm -rf node_modules && npm run clean",
     "compile": "tsc",
     "build": "npm run compile",
     "prebuild": "npm run clean && mkdir build",
-    "prepublish": "npm run build && npm run test"
+    "prepublish": "npm run test && npm run build"
   },
   "repository": {
     "type": "git",
@@ -30,13 +31,19 @@
     "isomorphic-fetch": "^2.2.1",
     "isomorphic-ws": "^4.0.1"
   },
-  "peerDependencies": {
+  "optionalDependencies": {
     "ws": "^6.0.0"
   },
   "devDependencies": {
     "@types/isomorphic-fetch": "0.0.34",
     "@types/jasmine": "^2.8.8",
     "jasmine": "^3.2.0",
+    "karma": "^3.0.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.2",
+    "karma-requirejs": "^1.1.0",
+    "karma-typescript": "^3.0.13",
+    "requirejs": "^2.3.6",
     "typescript": "^3.0.1"
   }
 }
