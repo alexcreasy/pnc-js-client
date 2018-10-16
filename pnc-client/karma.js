@@ -39,10 +39,6 @@ module.exports = function(config) {
             entryPoints: ".spec.ts",
         },
         reports: {
-            // "cobertura": {
-            //     "directory": "coverage",
-            //     "filename": "cobertura/coverage.xml"
-            // },
             "html": {
                 "directory": "build/reports/coverage"
             },

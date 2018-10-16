@@ -7,8 +7,8 @@
         "outDir": "build",
         "rootDir": "src",
         "esModuleInterop": true,
-        "noImplicitAny": true,
         "removeComments": true,
+        "noImplicitAny": true,
         "strict": true
     },
     "include": [

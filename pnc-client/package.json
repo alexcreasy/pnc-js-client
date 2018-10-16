@@ -10,7 +10,7 @@
     "test:node": "jasmine --config=jasmine.json",
     "pretest:node": "tsc -p tsconfig.jasmine.json",
     "test:browser": "karma start karma.js",
-    "clean": "rm -rf build/ .test/ coverage/",
+    "clean": "rm -rf build/ .test/",
     "clean:force": "rm -rf node_modules && npm run clean",
     "compile": "tsc",
     "build": "npm run compile",
